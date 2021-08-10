@@ -23,7 +23,6 @@ export const Form: React.FC<FormProps> = (props) => {
   });
 
   const onSubmit = (data: IFormItem) => {
-    console.log(data);
     reset();
     props.onSend(data);
   };
