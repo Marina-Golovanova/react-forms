@@ -17,12 +17,14 @@ export const Form: React.FC<FormProps> = (props) => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<IFormItem>({
     defaultValues: { country: "Russia", agreePromotion: false, agree: false },
   });
 
   const onSubmit = (data: IFormItem) => {
     console.log(data);
+    reset();
     props.onSend(data);
   };
 
