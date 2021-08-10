@@ -1,0 +1,20 @@
+.label {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  &__input {
+    margin-right: 5px;
+  }
+
+  &__error {
+    position: absolute;
+    top: 0;
+    color: red;
+    font-size: 10px;
+    right: 72px;
+    width: 101px;
+    text-align: right;
+  }
+}
