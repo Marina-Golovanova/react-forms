@@ -13,7 +13,7 @@ export const InputCheckbox = React.forwardRef<
   InputCheckboxProps
 >(function InputCheckbox(props, ref) {
   return (
-    <label className={styles.label} htmlFor="agree">
+    <label className={styles.label}>
       <input
         ref={ref}
         className={styles.label__input}

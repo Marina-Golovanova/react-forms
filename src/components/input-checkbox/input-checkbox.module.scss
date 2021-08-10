@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 
   &__input {
-    cursor: pointer;
     margin-right: 5px;
   }
 

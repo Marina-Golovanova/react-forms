@@ -3,5 +3,6 @@ export type IFormItem = {
   lastName: string;
   birthDate: string;
   country: string;
+  agreePromotion: boolean;
   agree: boolean;
 };

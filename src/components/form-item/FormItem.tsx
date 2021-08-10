@@ -17,10 +17,7 @@ type FormItemProps = {
 export const FormItem = React.forwardRef<HTMLElement, FormItemProps>(
   function FormItem(props, ref) {
     return (
-      <label
-        className={cn(styles.label, { [styles.errorLabel]: props.error })}
-        htmlFor={props.name}
-      >
+      <label className={cn(styles.label, { [styles.errorLabel]: props.error })}>
         {props.field}
         {props.tag === "input" ? (
           <input

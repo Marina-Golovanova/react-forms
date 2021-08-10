@@ -4,6 +4,7 @@ import { InputSubmit } from "../input-submit/InputSubmit";
 import { FormItem } from "../form-item/FormItem";
 import { InputCheckbox } from "../input-checkbox/InputCheckbox";
 import { IFormItem } from "../types";
+import { Switcher } from "../switcher/Switcher";
 
 import styles from "./form.module.scss";
 
@@ -17,10 +18,11 @@ export const Form: React.FC<FormProps> = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm<IFormItem>({
-    defaultValues: { country: "Russia", agree: false },
+    defaultValues: { country: "Russia", agreePromotion: false, agree: false },
   });
 
   const onSubmit = (data: IFormItem) => {
+    console.log(data);
     props.onSend(data);
   };
 
@@ -64,6 +66,7 @@ export const Form: React.FC<FormProps> = (props) => {
         error={errors.birthDate?.message}
       />
       <FormItem tag="select" field="Country" {...register("country")} />
+      <Switcher {...register("agreePromotion")} />
       <InputCheckbox {...register("agree")} error={errors.agree?.message} />
       <InputSubmit />
     </form>
